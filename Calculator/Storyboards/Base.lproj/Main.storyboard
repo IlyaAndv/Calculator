@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tgq-qw-DiT">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="YWs-rt-DAF">
+            <objects>
+                <viewController id="tgq-qw-DiT" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NaZ-ea-PbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nj1-1p-87m">
+                                <rect key="frame" x="20" y="316" width="390" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RXZ-Mb-Ql4">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fh7-Pe-orp">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="ubV-VJ-13I"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="1" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmX-Hz-CkH">
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="82.333333333333314" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="UBo-XW-Vfg"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="2" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRl-XT-EG6">
+                                                <rect key="frame" x="205" y="0.0" width="82.666666666666686" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="MI9-Z3-hzP"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="3" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQP-Qq-cUI">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="82.333333333333314" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="TYo-9J-N3g"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="/" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="pressButtonOperand:" destination="tgq-qw-DiT" eventType="touchUpInside" id="OvZ-nO-Wyr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jbb-hm-bWw">
+                                        <rect key="frame" x="0.0" y="80" width="390" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiJ-AD-r7b">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="FBj-yb-5aw"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="4" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deH-Ge-LNT">
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="82.333333333333314" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="M3N-gk-l3Q"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="5" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUC-8V-whp">
+                                                <rect key="frame" x="205" y="0.0" width="82.666666666666686" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="EFP-mF-ycT"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="6" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hac-VY-t3l">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="82.333333333333314" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="wEp-KH-A3t"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="*" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="pressButtonOperand:" destination="tgq-qw-DiT" eventType="touchUpInside" id="fqn-2S-pkO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OkH-ez-mJe">
+                                        <rect key="frame" x="0.0" y="160" width="390" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGE-GI-DOU">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="aRZ-2a-RjD"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="7" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIL-Sb-Z3M">
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="82.333333333333314" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Ybt-rI-eW9"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="8" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehb-Kn-qTG">
+                                                <rect key="frame" x="205" y="0.0" width="82.666666666666686" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="YIG-sH-EYC"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="9" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZW-ks-YaN">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="82.333333333333314" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="bX6-8f-3um"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="-" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="pressButtonOperand:" destination="tgq-qw-DiT" eventType="touchUpInside" id="1xu-Mc-y8H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zz9-Hv-Hco">
+                                        <rect key="frame" x="0.0" y="240" width="390" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-ns-iru">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Q9B-KE-sxM"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="0" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMz-SD-iw9">
+                                                <rect key="frame" x="102.66666666666669" y="0.0" width="82.333333333333314" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Zh1-2m-dbo"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="." buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUp-7K-jK7">
+                                                <rect key="frame" x="205" y="0.0" width="82.666666666666686" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="H68-mg-lwq"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="=" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="resultAction" destination="tgq-qw-DiT" eventType="touchUpInside" id="16g-VC-sI3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FQ-TN-9mc">
+                                                <rect key="frame" x="307.66666666666669" y="0.0" width="82.333333333333314" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="jEb-nQ-YdN"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="+" buttonSize="mini">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="pressButtonOperand:" destination="tgq-qw-DiT" eventType="touchUpInside" id="Ysb-Fl-Xaw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf6-jQ-VC4">
+                                <rect key="frame" x="20" y="236" width="82.666666666666671" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6x3-tM-9Gp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="AC" buttonSize="mini">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="allClean" destination="tgq-qw-DiT" eventType="touchUpInside" id="lYO-M3-suf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2l-hd-tDK">
+                                <rect key="frame" x="122.66666666666666" y="236" width="287.33333333333337" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Iw9-ae-dDe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4Y-Bi-NG1">
+                                <rect key="frame" x="20" y="636" width="390" height="60"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="a9W-hW-XEt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="abo-sN-FdS"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="nj1-1p-87m" firstAttribute="centerY" secondItem="NaZ-ea-PbJ" secondAttribute="centerY" id="42h-jc-4z2"/>
+                            <constraint firstItem="mf6-jQ-VC4" firstAttribute="width" secondItem="Fh7-Pe-orp" secondAttribute="width" id="58q-Kg-Hpg"/>
+                            <constraint firstItem="nj1-1p-87m" firstAttribute="top" secondItem="mf6-jQ-VC4" secondAttribute="bottom" constant="20" id="7kt-dy-y2e"/>
+                            <constraint firstItem="abo-sN-FdS" firstAttribute="trailing" secondItem="n4Y-Bi-NG1" secondAttribute="trailing" constant="20" id="9Ng-Sf-Lmi"/>
+                            <constraint firstItem="p2l-hd-tDK" firstAttribute="leading" secondItem="mf6-jQ-VC4" secondAttribute="trailing" constant="20" id="CpI-EC-Gkw"/>
+                            <constraint firstItem="n4Y-Bi-NG1" firstAttribute="leading" secondItem="abo-sN-FdS" secondAttribute="leading" constant="20" id="JjV-Oc-tni"/>
+                            <constraint firstItem="abo-sN-FdS" firstAttribute="trailing" secondItem="p2l-hd-tDK" secondAttribute="trailing" constant="20" id="Lwp-r1-lQp"/>
+                            <constraint firstItem="mf6-jQ-VC4" firstAttribute="leading" secondItem="abo-sN-FdS" secondAttribute="leading" constant="20" id="Ny8-MI-m8x"/>
+                            <constraint firstItem="n4Y-Bi-NG1" firstAttribute="top" secondItem="nj1-1p-87m" secondAttribute="bottom" constant="20" id="Qhh-wh-iTG"/>
+                            <constraint firstItem="nj1-1p-87m" firstAttribute="top" secondItem="p2l-hd-tDK" secondAttribute="bottom" constant="20" id="hDf-LQ-CBB"/>
+                            <constraint firstItem="nj1-1p-87m" firstAttribute="leading" secondItem="abo-sN-FdS" secondAttribute="leading" constant="20" id="nJr-KA-m62"/>
+                            <constraint firstItem="abo-sN-FdS" firstAttribute="trailing" secondItem="nj1-1p-87m" secondAttribute="trailing" constant="20" id="nQ4-vl-MGp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayExpression" destination="n4Y-Bi-NG1" id="4RE-Tt-PDc"/>
+                        <outlet property="displayValue" destination="p2l-hd-tDK" id="Mdh-Dx-ki3"/>
+                        <outletCollection property="buttons" destination="GUA-ns-iru" collectionClass="NSMutableArray" id="aYB-H8-k4a"/>
+                        <outletCollection property="buttons" destination="Fh7-Pe-orp" collectionClass="NSMutableArray" id="jgr-jL-dOi"/>
+                        <outletCollection property="buttons" destination="VmX-Hz-CkH" collectionClass="NSMutableArray" id="tcw-g8-JOe"/>
+                        <outletCollection property="buttons" destination="VRl-XT-EG6" collectionClass="NSMutableArray" id="DiC-4g-eoe"/>
+                        <outletCollection property="buttons" destination="OiJ-AD-r7b" collectionClass="NSMutableArray" id="5zN-vX-g7x"/>
+                        <outletCollection property="buttons" destination="deH-Ge-LNT" collectionClass="NSMutableArray" id="LPs-dS-WEv"/>
+                        <outletCollection property="buttons" destination="GUC-8V-whp" collectionClass="NSMutableArray" id="QS9-yx-0qW"/>
+                        <outletCollection property="buttons" destination="TGE-GI-DOU" collectionClass="NSMutableArray" id="ExK-F1-4La"/>
+                        <outletCollection property="buttons" destination="HIL-Sb-Z3M" collectionClass="NSMutableArray" id="fb7-08-R1W"/>
+                        <outletCollection property="buttons" destination="ehb-Kn-qTG" collectionClass="NSMutableArray" id="SrQ-tV-Z0E"/>
+                        <outletCollection property="buttons" destination="HMz-SD-iw9" collectionClass="NSMutableArray" id="VHg-kr-Sox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLK-7R-Ox1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
